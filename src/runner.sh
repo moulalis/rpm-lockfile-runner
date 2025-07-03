@@ -9,7 +9,7 @@ echo "==================================================="
 export CONFIG_FILE=config.yaml
 
 
-trap "rm *.tmp" EXIT
+# trap "rm *.tmp" EXIT
 
 indices=$(yq '.stages[] | path[1]' $CONFIG_FILE)
 if [ "$(uname -s)" = "Darwin" ]; then
